@@ -1,4 +1,5 @@
 <template>
+    <h1>Hai</h1>
     <div class="table">
         <table>
             <thead>
@@ -38,7 +39,7 @@
     import io from 'socket.io-client';
     const socket = io('http://192.168.10.10:8081');
 
-    import { updateActiveCellPosition } from '../vuex/actions';
+    import { updateActiveCellPosition } from '../vuex/action';
 
     export default {
         vuex: {
@@ -46,11 +47,14 @@
                 updateActiveCellPosition
             },
             getters: {
-                colums
+                columns: state => state.columns,
+                data: state => state.data,
+                activeRowIndex: state => state.activeRowIndex,
+                activeColumnIndex: state => state.activeColumnIndex
             }
         },
         ready() {
-            socket.io('clicked-cell-channel:App\\Events\\UserChangedActiveCell', (data) => {
+            socket.on('clicked-cell-channel:App\\Events\\UserChangedActiveCell', (data) => {
                 this.updateActiveCellPosition(data.rowIndex, data.columnIndex);
             });
         },

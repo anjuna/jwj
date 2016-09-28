@@ -1,7 +1,5 @@
 <template>
-    <div id="clasico">
-        <grid></grid>
-    </div>
+    <grid></grid>
 </template>
 
 <script>
