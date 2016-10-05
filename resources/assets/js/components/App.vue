@@ -1,5 +1,7 @@
 <template>
-    <grid></grid>
+    <div id="app">
+		<grid></grid>
+	</div>
 </template>
 
 <script>

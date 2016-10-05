@@ -16,5 +16,11 @@ require('laravel-elixir-vueify');
 //or webpack...
 
 elixir(mix => {
-    mix.browserify('app.js');
+    mix.browserify('app.js')
+        .styles([
+            'bootstrap.css',
+            'styles.css'
+        ]);
+
+
 });
