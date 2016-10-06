@@ -19,8 +19,8 @@
     </script>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="container">
+    <div id="container">
+        <div id="wrapper">
             @yield('content')
         </div>
     </div>
