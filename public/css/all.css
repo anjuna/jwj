@@ -14,9 +14,30 @@ body, div, h1, h2, h3, h4, h5, h6, p, a  {margin: 0;padding: 0;border: 0;vertica
   font-weight: 400;
 }
 
-body                {background-color:#F5FCFF;font-family:'fontProxima Nova88279';text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;color:#484848;text-rendering:optimizeLegibitity;}
-.navbar-jwj .navbar-toggle .icon-bar    {background-color:#888;}
-
-.text-box-normal    {padding:20px 0}
+body {
+    background-color:#F5FCFF;
+    font-family:'fontProxima Nova88279';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:#484848;
+    text-rendering:optimizeLegibitity;
+}
+.navbar-jwj .navbar-toggle .icon-bar    {
+    background-color:#888;
+}
+.navbar-nav>li>a {
+    color:mediumslateblue;
+    text-transform:uppercase;
+}
+.nav>li>a:hover {
+    background-color:transparent;
+}
+.page-top {
+    margin-bottom:50px;
+}
+.text-box-normal    {
+    padding:20px 0
+}
 
 /*# sourceMappingURL=all.css.map */

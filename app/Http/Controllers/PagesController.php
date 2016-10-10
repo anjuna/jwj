@@ -12,4 +12,14 @@ class PagesController extends Controller
     {
         return view('pages.home');
     }
+
+    public function aboutMe()
+    {
+        return view('pages.aboutme');
+    }
+
+    public function aboutSite()
+    {
+        return view('pages.aboutsite');
+    }
 }

@@ -31,14 +31,21 @@
           </button>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="active">
+                  <a href="/">JWJ</a>
+              </li>
+            </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a href="#">Default</a>
-            </li>
-            <li class="active">
-                <a href="#">Static top <span class="sr-only">(current)</span></a>
-            </li>
-            <li><a href="#">Fixed top</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/about-me">Me</a></li>
+                  <li><a href="/about-site">This site</a></li>
+                </ul>
+             </li>
+              <li><a href="/reviews">My reviews</a></li>
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
