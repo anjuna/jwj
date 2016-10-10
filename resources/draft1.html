@@ -1,0 +1,190 @@
+<html>
+<head>
+
+    <style>
+        /*Resets*/
+        html, body, div, span, h1, h2, h3, h4, h5, h6, p {
+        	margin: 0;
+        	padding: 0;
+        	border: 0;
+        	font-size: 100%;
+        	font: inherit;
+        	vertical-align: baseline;
+        }
+        html {
+          box-sizing: border-box;
+          font-family: 'arial';
+          text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;text-rendering:optimizeLegibitity;
+          font-weight:normal;
+        }
+        * {
+          box-sizing: inherit;
+        }
+        h1 {
+            font-size:25px;
+        }
+        h2 {
+            font-size:20px;
+        }
+        h3 {
+            font-size:15px;
+        }
+        h4 {
+            font-size:13px;
+        }
+        /*Custom*/
+        #container {max-width:20cm;
+            min-width:20cm;
+            max-height:29cm;
+            min-height:29cm;
+            padding:1cm 2cm;
+            border:1px solid black
+        }
+        header {
+            display:flex;
+            margin-bottom:30px;
+        }
+        header .name-title {
+            width:60%;
+        }
+        header .name-title h4 {
+            font-weight:bold;
+        }
+        header .contact-details {
+            width:40%;
+            text-align: right;
+        }
+
+        .wrapper {
+            display:flex;
+            flex-direction:row;
+            flex-wrap:no-wrap;
+            justify-content:space-between;
+            align-content:flex-start;
+            border-bottom:solid 1px rgb(65,165,209);
+            padding:15px 0;
+        }
+        .pointer {
+            width:20%;
+            font-weight:bold;
+        }
+        .body    {
+            width:80%;
+        }
+        .pointer-title {
+            font-style: italic;
+        }
+        .long-text {
+            text-align:justify;
+        }
+        .skills-list {
+            column-count:2;
+        }
+        .skills-list .skill {
+            margin-bottom:5px;
+        }
+        .skills-list .skill h3 {
+            font-weight:bold;
+            margin-bottom:2px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="container">
+
+    <header>
+        <div class="name-title">
+            <h1>Jamie Wickham-Jones</h1>
+            <h4>Full stack web developer</h4>
+        </div>
+        <div class="contact-details">
+            <p>me@jamiewickhamjones.com</p>
+            <p>07580 279 279</p>
+        </div>
+    </header>
+    <section>
+        <div class="wrapper summary">
+            <div class="pointer">
+                <h3 class="pointer-title">Summary</h3>
+            </div>
+            <div class="body">
+                <p class="long-text">I have built and maintained a number of websites, both as the primary developer and in a small team. I have delivered bespoke applications within a tight schedule and always while keeping a strong relationship with clients.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="wrapper skills">
+            <div class="pointer">
+                <h3 class="pointer-title">Skills</h3>
+            </div>
+            <div class="body">
+                <div class="skills-list">
+                    <div class="skill">
+                        <h3>php</h3>
+                        <p>Proficient with Laravel v5.*, strong understanding of OOP and MVC patterns. Experience with phpunit</p>
+                    </div>
+                    <div class="skill">
+                        <h3>Javascript</h3>
+                        <p>Extensive JQuery usage, good knowledge of Angular, React and Vue frameworks also using Websocket protocol. Backend services though node.js including Express, Hapi.</p>
+                    </div>
+                    <div class="skill">
+                        <h3>HTML & CSS3</h3>
+                        <p>Experience with bower, gulp, bootstrap and scss</p>
+                    </div>
+                    <div class="skill">
+                        <h3>Web native</h3>
+                        <p>Ionic and React-native</p>
+                    </div>
+                    <div class="skill">
+                        <h3>Version control</h3>
+                        <p>Team workflow using Git</p>
+                    </div>
+                    <div class="skill">
+                        <h3>DevOps</h3>
+                        <p>Strong knowledge of UNIX environment mainly developing with Vagrant. VPS configuration of both Nginx and Apache2, including process management with Supervisor and PM2. Good knoweledge of DNS management, HTTP architechture and </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="wrapper experience">
+            <div class="pointer">
+                <h3 class="pointer-title">Experience</h3>
+            </div>
+            <div class="body">
+                <div>
+                    <h4 class="position-title">Developer</h4>
+                    <h4>Liberty Tech Ltd.</h4>
+                    <p class="long-text"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="wrapper academia">
+            <div class="pointer">
+                <h3 class="pointer-title">Academia</h3>
+            </div>
+            <div class="body">
+                <div>
+                    <p>Durham University 2011-2014</p>
+                    <p>Mathematics First Class (Hons)</p>
+                </div>
+                <br>
+                <div>
+                    <p>Magdalen College School, Oxford 2004 - 2001</p>
+                    <p>A level: Further maths A*, Physics A*, Philosophy A</p>
+                    <p>GCSE: 10A*s</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Thank you for your time. This page was written in HTML.</p>
+    </footer>
+</div>
+</body>
+</html>

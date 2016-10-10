@@ -1,5 +1,4 @@
 body, div, h1, h2, h3, h4, h5, h6, p, a  {margin: 0;padding: 0;border: 0;vertical-align: top;}  			/*Browser reset*/
-*, *:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;} 	/*Silly padding*/
 
 @font-face {
   font-family: "fontProxima Nova88279";
@@ -8,8 +7,7 @@ body, div, h1, h2, h3, h4, h5, h6, p, a  {margin: 0;padding: 0;border: 0;vertica
   font-weight: 400;
 }
 
-body                {display:flex;justify-content: center;background-color:#F5FCFF;font-family:'fontProxima Nova88279';text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;color:#484848;text-rendering:optimizeLegibitity;}
-#container          {max-width:1024px;min-width:1024px;min-height:100vh;}
-#wrapper            {margin-top:100px;}
+body                {background-color:#F5FCFF;font-family:'fontProxima Nova88279';text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;color:#484848;text-rendering:optimizeLegibitity;}
+.navbar-jwj .navbar-toggle .icon-bar    {background-color:#888;}
 
 .text-box-normal    {padding:20px 0}

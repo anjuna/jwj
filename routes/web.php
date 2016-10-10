@@ -11,11 +11,10 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
-
-Route::get('spa', function (){
-    return view('angular');
-});
+Route::get('/', 'PagesController@index');
+Route::get('/about-me', 'PagesController@aboutMe');
+Route::get('/about-site', 'PagesController@aboutSite');
+Route::get('/reviews', 'ReviewsController@index');
 
 Auth::routes();
 

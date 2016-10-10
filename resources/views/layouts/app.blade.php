@@ -15,12 +15,36 @@
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
-        ]); ?>
+        ]); ?>;
+        window.easter = 'egg';
     </script>
 </head>
 <body>
-    <div id="container">
-        <div id="wrapper">
+    <nav class="navbar navbar-static-top navbar-jwj">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="#">Default</a>
+            </li>
+            <li class="active">
+                <a href="#">Static top <span class="sr-only">(current)</span></a>
+            </li>
+            <li><a href="#">Fixed top</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container">
+        <div>
             @yield('content')
         </div>
     </div>
