@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ed505f794cc52c9b7a35ed0b2faccac0",
-    "content-hash": "7e0e05e84f3eb333685719e2006b48a7",
+    "hash": "983e09e53b235eb3ec6d76e20596a26a",
+    "content-hash": "287aa4cc86a16d63a923403a90a0f886",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -515,6 +515,49 @@
                 "storage"
             ],
             "time": "2016-08-10 08:55:11"
+        },
+        {
+            "name": "miroc/laravel-adminer",
+            "version": "4.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/miroc/Laravel-Adminer.git",
+                "reference": "1fc88ce460321e6dcc93ee8ccf55f7c5f616a85d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/miroc/Laravel-Adminer/zipball/1fc88ce460321e6dcc93ee8ccf55f7c5f616a85d",
+                "reference": "1fc88ce460321e6dcc93ee8ccf55f7c5f616a85d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Miroc\\LaravelAdminer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miroslav Svitok",
+                    "email": "mirosvitok@gmail.com"
+                }
+            ],
+            "description": "Adminer (by Jakub Vrana) wrapper for Laravel 5",
+            "keywords": [
+                "adminer",
+                "database",
+                "laravel5",
+                "management"
+            ],
+            "time": "2016-02-21 09:53:00"
         },
         {
             "name": "monolog/monolog",

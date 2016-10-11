@@ -11,7 +11,7 @@
             <p>I am a young man fascinated by the internet.</p>
         </div>
         <div class="text">
-            <p>Have a look at my <a href="/downloads/JamieWickhamJonesCV.html">CV</a></p>
+            <p>Have a look at my <a target="_blank" href="/downloads/JamieWickhamJonesCV.html">CV</a></p>
         </div>
     </div>
 

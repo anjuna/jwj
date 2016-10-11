@@ -11,6 +11,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->makeThingsToBeReviewed();
+        $this->makeReviews();
+    }
+
+    protected function makeThingsToBeReviewed()
+    {
+        $this->call(BooksTableSeeder::class);
+    }
+
+    protected function makeReviews()
+    {
+        $this->call(ReviewsTableSeeder::class);
     }
 }

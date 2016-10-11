@@ -10,3 +10,6 @@ Auth::routes();
 Route::get('/vue', function (){
     return view('vue');
 });
+
+
+Route::any('adminer', '\Miroc\LaravelAdminer\AdminerController@index');
