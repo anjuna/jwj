@@ -7,14 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     public $timestamps = false;
+    public $guarded = ['id'];
 
     public function reviews()
     {
-        $this->morphMany(Review::class, 'reviewable');
+        return $this->morphMany('App\Review', 'reviewable');
     }
 
     public function addReview(Review $review)
     {
-        $this->reviews()->save($review);
+        return $this->reviews()->save($review);
     }
 }

@@ -7,14 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Film extends Model
 {
     public $timestamps = false;
+    public $guarded = ['id'];
 
     public function reviews()
     {
-        $this->morphMany(Review::class, 'reviewable');
+        return $this->morphMany(Review::class, 'reviewable');
     }
 
     public function addReview(Review $review)
     {
-        $this->reviews()->save($review);
+        return $this->reviews()->save($review);
     }
 }

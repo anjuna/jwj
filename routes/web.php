@@ -13,3 +13,11 @@ Route::get('/vue', function (){
 
 
 Route::any('adminer', '\Miroc\LaravelAdminer\AdminerController@index');
+
+Route::get('test', function (){
+
+    $ob = new App\Services\Jsonifer(new App\Book);
+    $ob->output();
+
+    dd('ok');
+});

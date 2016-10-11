@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
     protected function makeThingsToBeReviewed()
     {
         $this->call(BooksTableSeeder::class);
+        $this->call(FilmsTableSeeder::class);
+        $this->call(MusicPiecesTableSeeder::class);
+
     }
 
     protected function makeReviews()

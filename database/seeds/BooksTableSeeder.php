@@ -17,5 +17,10 @@ class BooksTableSeeder extends Seeder
             'name' => 'Anna Karennina',
             'author' => 'Leo Tolstoy'
         ]);
+
+        Book::create([
+            'name' => 'Far from the Madding crowd',
+            'author' => 'Thomas Hardy'
+        ]);
     }
 }
