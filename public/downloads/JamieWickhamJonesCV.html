@@ -24,7 +24,7 @@
             font-size:30px;
         }
         h2 {
-            font-size:20px;
+            font-size:17px;
         }
         h3 {
             font-size:15px;
@@ -44,10 +44,14 @@
             max-height:29cm;
             min-height:29cm;
             padding:0.7cm 1.8cm;
+            /*Printer check*/
+            border:dashed 1px black;
         }
         header {
             display:flex;
+            display: -webkit-flex;
             justify-content:space-between;
+            -webkit-justify-content:space-between;
             align-items:flex-end;
             margin-bottom:30px;
         }
@@ -57,14 +61,13 @@
         header .contact-details {
             text-align: right;
         }
-        section {
-            margin-bottom:10px;
-        }
         .section-wrapper {
             display:flex;
+            display: -webkit-flex;     /* NEW - Chrome */
             flex-direction:row;
             flex-wrap:no-wrap;
             justify-content:space-between;
+            -webkit-justify-content: space-between;
             align-content:flex-start;
             border-top:solid 1px rgb(65,165,209);
             padding:15px 0;
@@ -81,12 +84,18 @@
         }
         .long-text {
             text-align:justify;
+            margin-bottom:10px;
         }
         .skills-list {
-            column-count:2;
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
         }
         .skills-list .skill {
             margin-bottom:5px;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
         }
         .skills-list .skill h3 {
             font-weight:bold;
@@ -97,16 +106,22 @@
         }
         .experience .position-header-wrapper {
             display:flex;
+            display: -webkit-flex;
+            justify-content:space-between;
+            -webkit-justify-content: space-between;
             flex-direction:row;
             justify-content:space-between;
+            -webkit-justify-content: space-between;
             margin-bottom:5px;
         }
-        .experience .position-header-wrapper .title {
-            width:70%;
+        .experience  .position-title {
+            font-weight:bold;
         }
         .academic-place {
             display:flex;
+            display: -webkit-flex;
             justify-content:space-between;
+            -webkit-justify-content: space-between;
             margin-bottom:3px;
         }
         footer {
@@ -136,17 +151,16 @@
     <section>
         <div class="section-wrapper summary">
             <div class="pointer">
-                <h3 class="pointer-title">Summary</h3>
+                <h2 class="pointer-title">Summary</h2>
             </div>
             <div class="body">
                 <p class="long-text">
                     I have built and maintained a number of websites, both as the primary developer and in a small team.
-                    I have delivered bespoke applications within a tight schedule and always while keeping a strong relationship with clients.
+                    I have delivered bespoke applications within a tight schedule, always  keeping a strong relationship with the end client.
                 </p>
-                <br>
                 <p class="long-text">
                     A keen problem solver, my passion has for a long time been learning. I am wholly fascinated by the web and relish the chance to thrive in a
-                    stimulating environment where I can further develop my programming skills.
+                    stimulating environment.
                 </p>
             </div>
         </div>
@@ -154,47 +168,46 @@
     <section>
         <div class="section-wrapper skills">
             <div class="pointer">
-                <h3 class="pointer-title">Skills</h3>
+                <h2 class="pointer-title">Skills</h2>
             </div>
-            <div class="body">
-                <div class="skills-list">
-                    <div class="skill">
-                        <h3>php</h3>
-                        <p>Proficient with Laravel v5.*, strong understanding of OOP and MVC patterns. Experience with phpunit</p>
-                    </div>
-                    <div class="skill">
-                        <h3>Javascript</h3>
-                        <p>
-                            Extensive JQuery usage, good knowledge of Angular, React and Vue frameworks, real time development with socket.io.
-                            Very comfortable with ES2015 script and have backend experience through node.js including Express, Hapi.
-                        </p>
-                    </div>
-                    <div class="skill">
-                        <h3>SQL</h3>
-                        <p>
-                            Comprehensive experience with mysql, database structuring and ORM systems.
-                        </p>
-                    </div>
-                    <div class="skill">
-                        <h3>HTML & CSS3</h3>
-                        <p>Experience with bootstrap, bower, gulp and scss</p>
-                    </div>
-                    <div class="skill">
-                        <h3>Version control</h3>
-                        <p>Team workflow using Git</p>
-                    </div>
-                    <div class="skill">
-                        <h3>DevOps</h3>
-                        <p>
-                            Strong knowledge of UNIX environment, mainly developing with Vagrant.
-                            Experience of VPS set up with both Nginx and Apache2, including process management with Supervisor and PM2.
-                            Good knoweledge of DNS configuration, HTTP architechture and RESTful services
-                        </p>
-                    </div>
-                    <div class="skill">
-                        <h3>Web native</h3>
-                        <p>Usage of Ionic and React-native frameworks</p>
-                    </div>
+            <div class="body skills-list">
+                <div class="skill">
+                    <h3>php</h3>
+                    <p>Proficient with Laravel v5.*, strong understanding of OOP and MVC patterns. Experience with phpunit</p>
+                </div>
+                <div class="skill">
+                    <h3>Javascript</h3>
+                    <p>
+                        Extensive JQuery usage, good knowledge of Angular, React and Vue frameworks.
+                        Backend experience with node.js including Express, Hapi, Socket.io
+                    </p>
+                </div>
+                <div class="skill">
+                    <h3>SQL</h3>
+                    <p>
+                        Comprehensive experience with mysql, database structuring and ORM systems
+                    </p>
+                </div>
+                <div class="skill">
+                    <h3>HTML & CSS3</h3>
+                    <p>Experience with bootstrap, bower, gulp and scss</p>
+                </div>
+                <div class="skill">
+                    <h3>Version control</h3>
+                    <p>Team workflow using Git</p>
+                </div>
+                <div class="skill">
+                    <h3>DevOps</h3>
+                    <p>
+                        Strong knowledge of UNIX environment including Vagrant development, VPS set up with both Nginx and Apache,
+                        process management with Supervisor and PM2, DNS configuration, HTTP architechture and RESTful services
+                    </p>
+                </div>
+                <div class="skill">
+                    <h3>Web native</h3>
+                    <p>
+                        Usage of Ionic and React-native frameworks
+                    </p>
                 </div>
             </div>
         </div>
@@ -202,7 +215,7 @@
     <section>
         <div class="section-wrapper experience">
             <div class="pointer">
-                <h3 class="pointer-title">Experience</h3>
+                <h2 class="pointer-title">Experience</h2>
             </div>
             <div class="body">
                 <div class="position">
@@ -216,13 +229,13 @@
                         </div>
                     </div>
                     <p class="long-text">
-                        I joined as a web developer rookie and worked my way up to be a pivotal part of the company.
-                        Through a dedicated stretch of self learning I came to grasp many complex programming ideas and technologies that I still take a passion in learning new things about.
+                        I joined as a web developer novice and worked my way up to be a pivotal part of the company.
+                        Through dedicated self-learning I came to grasp many complex programming ideas and technologies,
+                        to the point of leading tutorial sessions for juniors within the company.
                     </p>
-                    <br>
                     <p class="long-text">
-                        My duties evolved from simple changes and database management to being tasked with building large scale applications from the ground up.
-                        Working with some big name clients I have honed my eye for detail and developed my awareness for a websites needs.
+                        My duties evolved from simple changes and database management to building large scale applications from the ground up for some international retail clients.
+                        I have honed my eye for detail and developed a strong awareness of the full developmental life-cycle of a web service.
                     </p>
                 </div>
 
@@ -254,7 +267,7 @@
     <section>
         <div class="section-wrapper academia">
             <div class="pointer">
-                <h3 class="pointer-title">Academia</h3>
+                <h2 class="pointer-title">Academia</h2>
             </div>
             <div class="body">
                 <div>
