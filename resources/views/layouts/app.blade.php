@@ -55,8 +55,6 @@
             @yield('content')
         </div>
     </div>
-
-    <!-- Scripts -->
-    <script src="/js/app.js"></script>
 </body>
+@yield('scripts')
 </html>

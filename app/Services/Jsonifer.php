@@ -2,14 +2,18 @@
 
 namespace App\Services;
 
-use Illuminate\Database\Eloquent\Model as ReviewableModel;
+use App\Reviewable;
 
 class Jsonifer
 {
     protected $data;
     private $fileName;
 
-    public function __construct(ReviewableModel $model)
+    /**
+     * Set the data and the file name for the outputted json
+     * @param ReviewableModel $model
+     */
+    public function __construct(Reviewable $model)
     {
         $this->data = $model::with('reviews')->get();
 

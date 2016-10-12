@@ -22,5 +22,10 @@ elixir(mix => {
             'styles.css'
         ]);
 
+    mix.webpack(
+        'reviews/index.js',
+        './public/js/reviews/reviews-bundle.js'
+    );
+
 
 });

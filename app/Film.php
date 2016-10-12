@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Film extends Model
+class Film extends Model implements Reviewable
 {
     public $timestamps = false;
     public $guarded = ['id'];

@@ -32,3 +32,4 @@ body {
 .text-box-normal    {
     padding:20px 0
 }
+#app-holder    {min-width:784px;padding:20px;margin-top:50px;}
