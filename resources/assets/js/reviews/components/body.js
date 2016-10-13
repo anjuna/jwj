@@ -9,11 +9,11 @@ const style = {
 export default class Body extends React.Component {
 
     render (){
-        console.log(this.props.currentBook);
+
         return (
             <div style={style}>
                 <BookList books={this.props.books} selectBook={this.props.selectBook}/>
-                <BookInfo book={this.props.currentBook}/>
+                <BookInfo book={this.props.currentBook} hey={this.props.hey}/>
             </div>
         )
     }

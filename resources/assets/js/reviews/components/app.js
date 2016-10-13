@@ -32,23 +32,12 @@ export default class App extends React.Component {
     }
 
     renderShite(){
-        if (this.state.hey) {
-            return (
-                <p>you got me!</p>
-            );
-        }
-
         return (
             <div>
                 <Header />
-                <Body books={books} currentBook={this.state.currentBook} selectBook={this.selectBook} />
-                <p onClick={this.doSomething.bind(this)}>test</p>
+                <Body books={books} currentBook={this.state.currentBook} selectBook={this.selectBook.bind(this)} hey={this.state.hey}/>
             </div>
         );
-    }
-
-    doSomething(){
-        this.setState({hey: true});
     }
 
     render (){
