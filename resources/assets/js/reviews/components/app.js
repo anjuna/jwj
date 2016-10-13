@@ -20,7 +20,8 @@ export default class App extends React.Component {
         super(props);
 
         this.state = {
-            currentBook: books[0]
+            currentBook: books[0],
+            hey: false
         }
     }
 
@@ -31,12 +32,23 @@ export default class App extends React.Component {
     }
 
     renderShite(){
+        if (this.state.hey) {
+            return (
+                <p>you got me!</p>
+            );
+        }
+
         return (
             <div>
                 <Header />
                 <Body books={books} currentBook={this.state.currentBook} selectBook={this.selectBook} />
+                <p onClick={this.doSomething.bind(this)}>test</p>
             </div>
         );
+    }
+
+    doSomething(){
+        this.setState({hey: true});
     }
 
     render (){
