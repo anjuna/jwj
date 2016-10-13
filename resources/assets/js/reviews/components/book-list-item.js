@@ -3,7 +3,7 @@ import React from 'react';
 const style = {
     margin: '5px 0',
     padding: '10px',
-    cursor: 'pointer'
+    cursor: 'pointer',
 }
 
 export default class BookListItem extends React.Component {

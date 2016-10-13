@@ -3,7 +3,7 @@ import _ from 'lodash';
 import BookListItem from './book-list-item';
 
 const style = {
-    backgroundColor: 'mistyrose'
+
 }
 
 export default class BookList extends React.Component {
