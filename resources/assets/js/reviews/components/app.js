@@ -20,24 +20,29 @@ export default class App extends React.Component {
         super(props);
 
         this.state = {
-            books,
             currentBook: books[0]
         }
     }
 
-    selectBook(id){
-        console.log(id);
+    selectBook(book){
+        this.setState({
+            currentBook: book
+        });
+    }
 
-        // this.setState({
-        //     currentBook: books[id]
-        // })
+    renderShite(){
+        return (
+            <div>
+                <Header />
+                <Body books={books} currentBook={this.state.currentBook} selectBook={this.selectBook} />
+            </div>
+        );
     }
 
     render (){
         return (
             <div style={style}>
-                <Header />
-                <Body books={this.state.books} currentBook={this.state.currentBook} selectBook={this.selectBook}/>
+                {this.renderShite()}
             </div>
         )
     }

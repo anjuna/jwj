@@ -11,8 +11,8 @@ export default class Body extends React.Component {
     render (){
         return (
             <div style={style}>
-                <BookList books={this.props.books}/>
-                <BookInfo />
+                <BookList books={this.props.books} selectBook={this.props.selectBook}/>
+                <BookInfo book={this.props.currentBook}/>
             </div>
         )
     }

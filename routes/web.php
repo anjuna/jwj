@@ -13,11 +13,21 @@ Route::get('/vue', function (){
 
 
 Route::any('adminer', '\Miroc\LaravelAdminer\AdminerController@index');
+// use Zf2Basket\Basket as Zf2Basket;
+// use Zf2Basket\Storage\Adapter\Cookie as StorageAdapterCookie;
+// use Zf2Basket\Storage\StorageAdapterInterface;
 
 Route::get('test', function (){
 
-    $ob = new App\Services\Jsonifer(new App\Book);
-    $ob->output();
 
-    dd('ok');
+    // $basket = new Zf2Basket(new StorageAdapterCookie(session_id(), array(StorageAdapterInterface::CONFIG_NAME => 'SOME_COOKIE_NAME')));
+
+    app()->bind(
+        'Zf2Basket\Storage\StorageAdapterInterface',
+        'Zf2Basket\Storage\Adapter\Cookie'
+    );
+
+    $basket = app()->make(Zf2Basket\Zf2Basket::class);
+
+    dd($basket);
 });
