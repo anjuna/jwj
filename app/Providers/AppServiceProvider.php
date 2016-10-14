@@ -10,8 +10,7 @@ use App\Review;
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap any application services.
-     *
+     * Make sure any changes to reviews are propagated to json files in public directory
      * @return void
      */
     public function boot()
@@ -21,7 +20,6 @@ class AppServiceProvider extends ServiceProvider
 
     /**
      * Register any application services.
-     *
      * @return void
      */
     public function register()

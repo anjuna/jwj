@@ -45,7 +45,7 @@
                 </ul>
              </li>
               <li><a href="/reviews">My reviews</a></li>
-
+               <li><a href="/login">Login</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

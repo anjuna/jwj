@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->makeThingsToBeReviewed();
         $this->makeReviews();
+
+        $this->call(UserSeed::class);
     }
 
     protected function makeThingsToBeReviewed()
