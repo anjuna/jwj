@@ -23,14 +23,23 @@ body {
     color:#484848;
     text-rendering:optimizeLegibitity;
 }
+.navbar-jwj {
+    background-color:#3B3738;
+}
 .navbar-jwj .navbar-toggle .icon-bar    {
     background-color:#888;
 }
 .navbar-nav>li>a {
-    color:mediumslateblue;
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
     text-transform:uppercase;
 }
 .nav>li>a:hover {
+    background-color:transparent;
+    color:#ccc;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
     background-color:transparent;
 }
 .page-top {

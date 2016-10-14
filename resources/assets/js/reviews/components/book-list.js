@@ -8,7 +8,7 @@ const style = {
 
 export default class BookList extends React.Component {
     renderItems(){
-        return _.map(this.props.books, (book) => <BookListItem key={book.id} book={book} selectBook={this.props.selectBook} />);
+        return _.map(this.props.books, (book) => <BookListItem key={book.id} book={book} selectBook={this.props.selectBook} currentBook={this.props.currentBook} />);
     }
 
     render (){
