@@ -19,6 +19,7 @@ class CreateReviewablesTable extends Migration
             $table->string('title');
             $table->string('creator');
             $table->date('year_made');
+            $table->timestamps();
         });
     }
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Type; use App\Reviewable;
 
 class ReviewsController extends Controller
 {
@@ -19,6 +19,9 @@ class ReviewsController extends Controller
 
     public function create()
     {
-        return view('pages.reviews.create');
+        $types = Type::all();
+        $reviewables = Reviewable::all();
+
+        return view('pages.reviews.create', compact('types', 'reviewables'));
     }
 }

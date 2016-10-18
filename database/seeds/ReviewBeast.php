@@ -16,6 +16,8 @@ class ReviewBeast extends Seeder
         $this->setUpReviewables();
 
         $this->writeSomeReviews();
+
+        $this->touchTypes();
     }
 
     protected function setUpReviewables()
@@ -69,7 +71,7 @@ class ReviewBeast extends Seeder
     {
         $anna = Reviewable::where('title', 'Anna Karenina')->first();
 
-        $anna->reviews()->attach(
+        $anna->reviews()->save(
             new Review([
                 'body' => 'Awesome book, feels like you live several lives'
             ])
@@ -77,7 +79,7 @@ class ReviewBeast extends Seeder
 
         $martian = Reviewable::where('title', 'The Martian')->first();
 
-        $martian->reviews()->attach(
+        $martian->reviews()->save(
             new Review([
                 'body' => 'Pleasant foray into a scientists somewhat whimsical escape of the red planet'
             ])
@@ -85,10 +87,27 @@ class ReviewBeast extends Seeder
 
         $madding = Reviewable::where('title', 'Far from the Madding crowd')->first();
 
-        $madding->reviews()->attach(
+        $madding->reviews()->save(
             new Review([
                 'body' => 'Painful love-quadrangle set in beautiful countryside'
             ])
         );
+
+        $sonatina = Reviewable::where('title', 'Sonatina')->first();
+
+        $sonatina->reviews()->save(
+            new Review([
+                'body' => 'Hauntingly beautiful'
+            ])
+        );
+    }
+
+    protected function touchTypes()
+    {
+        // $types = Type::all();
+        //
+        // foreach ($types as $type) {
+        //     $type->touch();
+        // }
     }
 }

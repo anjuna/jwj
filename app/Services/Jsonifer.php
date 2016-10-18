@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Reviewable;
+use App\Type;
 
 class Jsonifer
 {
@@ -13,11 +13,11 @@ class Jsonifer
      * Set the data and the file name for the outputted json
      * @param ReviewableModel $model
      */
-    public function __construct(Reviewable $model)
+    public function __construct(Type $type)
     {
-        $this->data = $model::with('reviews')->get();
+        $this->data = $type->reviewables()->with('reviews')->get();;
 
-        $this->fileName = public_path('json/'.$model->getTable().'.json');
+        $this->fileName = public_path('json/'.$type->name.'.json');
     }
 
     public function output()

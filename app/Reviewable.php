@@ -8,11 +8,11 @@ class Reviewable extends Model
 {
     public $guarded = ['id'];
 
-    public $timestamps = false;
+    public $touches = ['type'];
 
     public function reviews()
     {
-        return $this->belongsToMany(Review::class);
+        return $this->hasMany(Review::class);
     }
 
     public function type()

@@ -8,8 +8,10 @@ class Review extends Model
 {
     public $guarded = ['id'];
 
+    public $touches = ['reviewable'];
+
     public function reviewable()
     {
-        return $this->belongsToMany(Reviewable::class);
+        return $this->belongsTo(Reviewable::class);
     }
 }

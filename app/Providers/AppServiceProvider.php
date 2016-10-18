@@ -4,8 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-use App\Observers\ReviewObserver;
-use App\Review;
+use App\Observers\ExportReviewDataOfType;
+use App\Type;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Review::observe(ReviewObserver::class);
+        Type::observe(ExportReviewDataOfType::class);
     }
 
     /**
