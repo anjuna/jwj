@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMusicPiecesTable extends Migration
+class CreateReviewableTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateMusicPiecesTable extends Migration
      */
     public function up()
     {
-        Schema::create('music_pieces', function (Blueprint $table) {
+        Schema::create('types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('composer');
         });
     }
 
@@ -27,6 +26,6 @@ class CreateMusicPiecesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('music_pieces');
+        Schema::dropIfExists('types');
     }
 }

@@ -11,22 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->makeThingsToBeReviewed();
-        $this->makeReviews();
+        $this->call(ReviewBeast::class);
 
         $this->call(UserSeed::class);
-    }
-
-    protected function makeThingsToBeReviewed()
-    {
-        $this->call(BooksTableSeeder::class);
-        $this->call(FilmsTableSeeder::class);
-        $this->call(MusicPiecesTableSeeder::class);
-
-    }
-
-    protected function makeReviews()
-    {
-        $this->call(ReviewsTableSeeder::class);
     }
 }

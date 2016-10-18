@@ -2,13 +2,21 @@
 
 namespace App;
 
-use \Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Model;
 
-interface Reviewable
+class Reviewable extends Model
 {
-    /**
-     * Specify the morphMany relationship on things that can be reviewed
-     * @return [type] [description]
-     */
-    public function reviews();
+    public $guarded = ['id'];
+
+    public $timestamps = false;
+
+    public function reviews()
+    {
+        return $this->belongsToMany(Review::class);
+    }
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
 }
