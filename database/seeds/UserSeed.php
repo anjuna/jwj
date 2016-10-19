@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use App\User;
+use App\User; use App\Role;
 
 class UserSeed extends Seeder
 {
@@ -13,8 +13,21 @@ class UserSeed extends Seeder
      */
     public function run()
     {
+        Role::create([
+            'name' => 'minion'
+        ]);
+
+        Role::create([
+            'name' => 'journeyman'
+        ]);
+
+        Role::create([
+            'name' => 'overlord'
+        ]);
+
         User::create([
             'name' => 'Jamie',
+            'role_id' => 3,
             'email' => 'jamie@test.com',
             'password' => bcrypt('test')
         ]);

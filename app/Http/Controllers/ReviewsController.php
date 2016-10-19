@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Services\ReviewStorer;
 use Auth;
 
 use App\Type; use App\Reviewable; use App\Review;
@@ -35,11 +36,7 @@ class ReviewsController extends Controller
             'body' => 'required'
         ]);
 
-        Review::create([
-            'user_id' => Auth::user()->id,
-            'reviewable_id' => $request->reviewable,
-            'body' => $request->body
-        ]);
+        ReviewStorer::make($request->all());
 
         return redirect('/reviews');
     }
