@@ -4,9 +4,7 @@ import Header from './header';
 import Body from './body';
 
 //will be fetched later
-const books = [{"id":1,"name":"Anna Karennina","author":"Leo Tolstoy","reviews":[{"id":3,"reviewable_id":1,"reviewable_type":"App\\Book","body":"Awesome book, feels like you live several lives","created_at":"2016-10-11 14:39:29","updated_at":"2016-10-11 14:39:29"}]},
-{"id":2,"name":"Far from the Madding crowd","author":"Thomas Hardy","reviews":[{"id":4,"reviewable_id":2,"reviewable_type":"App\\Book","body":"Painful love-quadrangle set in beautiful countryside","created_at":"2016-10-11 14:39:29","updated_at":"2016-10-11 14:39:29"}]}
-];
+
 
 const style = {
     border: "1px dashed black",
@@ -19,35 +17,25 @@ export default class App extends React.Component {
         super(props);
 
         this.state = {
-            currentBook: books[0],
+            books: [],
+            currentBook: {},
         }
     }
 
     componentDidMount(){
-        this.fetchData();
-    }
 
-    fetchData(){
-        // var xhr = new XMLHttpRequest();
-        // xhr.open('GET', '/json/books.json');
-        // xhr.onload = function() {
-        //     if (xhr.status === 200) {
-        //         this.setState({
-        //             books: xhr.responseText
-        //         });
-        //         console.log('ol');
-        //         return;
-        //     } else {
-        //         console.log('failed');
-        //     }
-        // }.bind(this);
-        // xhr.send();
-        // $.get('/json/books.json', function (data){
-        //     console.log(data);
-        //     this.setState({
-        //         books: data
-        //     });
-        // }.bind(this));
+        fetch('http://jwj.app/json/book.json', {
+        	method: 'get'
+        }).then(function(response) {
+        	return response.json();
+        }).then(function (books){
+            this.setState({
+                books,
+                currentBook: books[0]
+            });
+        }.bind(this)).catch(function(err) {
+        	// Error :(
+        });
     }
 
     selectBook(book){
@@ -57,20 +45,27 @@ export default class App extends React.Component {
     }
 
     renderShite(){
-        this.fetchData();
+
         return (
             <div>
                 <Header />
-                <Body books={books} currentBook={this.state.currentBook} selectBook={this.selectBook.bind(this)}/>
+                <Body books={this.state.books} currentBook={this.state.currentBook} selectBook={this.selectBook.bind(this)}/>
             </div>
         );
     }
 
     render (){
-        return (
-            <div style={style}>
-                {this.renderShite()}
-            </div>
-        )
+        if (this.state.books.length === 0) {
+            return (
+                <p>Loading...</p>
+            );
+        } else {
+
+            return (
+                <div style={style}>
+                    {this.renderShite()}
+                </div>
+            )
+        }
     }
 }

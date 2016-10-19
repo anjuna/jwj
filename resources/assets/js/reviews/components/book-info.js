@@ -7,12 +7,24 @@ const style = {
 
 export default class BookInfo extends React.Component {
 
+    printReviews(){
+        return this.props.reviews.forEach((review) => {
+            return (
+                <p>{review.body}</p>
+            );
+        });
+    }
+
     render (){
         return (
             <div style={style}>
-                <h3>{this.props.book.name}</h3>
-                <p>{this.props.book.reviews[0].body}</p>
+                <h3>{this.props.book.title}</h3>
+                {this.printReviews()}
             </div>
         );
     }
 }
+
+/*for (var review in this.props.book.reviews) {
+    <p>{review.body}</p>
+}*/

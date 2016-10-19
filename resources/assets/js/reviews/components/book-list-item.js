@@ -36,7 +36,7 @@ export default class BookListItem extends React.Component {
                 onClick={this.props.selectBook.bind(this, this.props.book)}
             >
                 <div>
-                    {this.props.book.name}
+                    {this.props.book.title}
                 </div>
             </div>
         )
