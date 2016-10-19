@@ -8,7 +8,7 @@ Route::get('/reviews/create', 'ReviewsController@create');
 Route::post('/reviews/create', 'ReviewsController@save');
 
 Auth::routes();
-//Workaround so dont have to post a logout form
+//Workaround so dont have to post a logout form...silly 5.3
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/vue', function (){
@@ -19,9 +19,10 @@ Route::get('/vue', function (){
 Route::any('adminer', '\Miroc\LaravelAdminer\AdminerController@index');
 
 Route::get('test', function (){
-    $type = App\Type::find(2);
+    $review = App\Review::find(1);
+    $review->update([
+        'body' => 'back again'
+    ]);
 
-    $reviews = $type->reviewables()->with('reviews')->get();
-
-    dd(json_encode($reviews));
+    return redirect('/reviews');
 });

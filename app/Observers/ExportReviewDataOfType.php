@@ -12,7 +12,7 @@ class ExportReviewDataOfType
      * @param  Type $type
      * @return void
      */
-    public function updated(Type $type)
+    public function saved(Type $type)
     {
         $handle = new Jsonifer($type);
         $handle->output();
