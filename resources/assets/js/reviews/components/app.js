@@ -45,9 +45,8 @@ export default class App extends React.Component {
     }
 
     renderShite(){
-
         return (
-            <div>
+            <div style={style}>
                 <Header />
                 <Body books={this.state.books} currentBook={this.state.currentBook} selectBook={this.selectBook.bind(this)}/>
             </div>
@@ -57,15 +56,10 @@ export default class App extends React.Component {
     render (){
         if (this.state.books.length === 0) {
             return (
-                <p>Loading...</p>
+                <p>loading</p>
             );
         } else {
-
-            return (
-                <div style={style}>
-                    {this.renderShite()}
-                </div>
-            )
+            return this.renderShite()
         }
     }
 }

@@ -19,7 +19,7 @@ export default class BookInfo extends React.Component {
         return (
             <div style={style}>
                 <h3>{this.props.book.title}</h3>
-                {this.printReviews()}
+                <p>{this.props.book.reviews[0].body}</p>
             </div>
         );
     }
