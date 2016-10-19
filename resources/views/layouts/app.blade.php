@@ -50,7 +50,7 @@
               @else
                   <li>
                       <a href="/login">Login</a>
-                  </li>
+                  ``</li>
               @endif
           </ul>
         </div><!--/.nav-collapse -->

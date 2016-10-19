@@ -5,6 +5,7 @@ Route::get('/about-me', 'PagesController@aboutMe');
 Route::get('/about-site', 'PagesController@aboutSite');
 Route::get('/reviews', 'ReviewsController@index');
 Route::get('/reviews/create', 'ReviewsController@create');
+Route::post('/reviews/create', 'ReviewsController@save');
 
 Auth::routes();
 //Workaround so dont have to post a logout form

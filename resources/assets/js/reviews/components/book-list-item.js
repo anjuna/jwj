@@ -29,8 +29,13 @@ export default class BookListItem extends React.Component {
         };
 
         return (
-            <div style={styles} onMouseOver={this.hovered.bind(this)} onMouseOut={this.exited.bind(this)}>
-                <div onClick={this.props.selectBook.bind(this, this.props.book)}>
+            <div
+                style={styles}
+                onMouseOver={this.hovered.bind(this)}
+                onMouseOut={this.exited.bind(this)}
+                onClick={this.props.selectBook.bind(this, this.props.book)}
+            >
+                <div>
                     {this.props.book.name}
                 </div>
             </div>

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Type; use App\Reviewable;
+use Auth;
+
+use App\Type; use App\Reviewable; use App\Review;
 
 class ReviewsController extends Controller
 {
@@ -23,5 +25,22 @@ class ReviewsController extends Controller
         $reviewables = Reviewable::all();
 
         return view('pages.reviews.create', compact('types', 'reviewables'));
+    }
+
+    public function save(Request $request)
+    {
+        $this->validate($request, [
+            'type' => 'required',
+            'reviewable' => 'required',
+            'body' => 'required'
+        ]);
+
+        Review::create([
+            'user_id' => Auth::user()->id,
+            'reviewable_id' => $request->reviewable,
+            'body' => $request->body
+        ]);
+
+        return redirect('/reviews');
     }
 }
