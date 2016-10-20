@@ -24,7 +24,7 @@ export default class App extends React.Component {
 
     componentDidMount(){
 
-        fetch('http://jwj.app/json/book.json', {
+        fetch('/json/book.json', {
         	method: 'get'
         }).then(function(response) {
         	return response.json();
